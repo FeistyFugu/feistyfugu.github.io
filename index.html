@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="fb.css">
+    <link rel="stylesheet" href="signup-form-flex.css">
+    <link rel="stylesheet" href="topnav.css">
+    <script type="text/javascript" src="http://downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js" data-dojo-config="usePlainJson: true, isDebug: true">
+    </script>
+</head>
+
+<body>
+    <div class="topnav">
+        <div class="logo-space">
+            <img src="assets/debate.png" alt="Debatrium">
+            <p>DEBATRIUM</p>
+        </div>
+        <div class="search-space">
+            <form>
+                <input type="text" placeholder="Search..." name="search">
+            </form>
+        </div>
+        <div class="account-space">
+            <img src="assets/unknown-user.png">
+            <a href="#login">Login</a>
+            <a href="#signup" id="signup-link">Signup</a>
+        </div>
+    </div>
+    <div class="main">
+        <div class="splash">
+            <div class="learn-more-space">
+                <h1>Speech has never been freer</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium accusamus iste quia corporis
+                    saepe
+                    aliquid deleniti itaque mollitia porro aperiam? Sequi iure eius repellendus saepe veniam ad
+                    voluptate
+                    accusantium assumenda.
+                </p>
+                <button id="open-popup" class="link-button">Learn more</a>
+            </div>
+            <div class="signup-message">
+                <h3>Join the conversation.</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis voluptas, nobis placeat
+                    voluptatem earum eius impedit consectetur cum voluptate temporibus minima velit.</p>
+                <form class="signup-form">
+                    <div class="social-media-signup">
+                        <h4>Use your social media account:</h4>
+                        <a href="#" class="fb btn"><i class="fa fa-facebook fa-fw"></i> Sign up with Facebook</a>
+                        <a href="#" class="twitter btn"><i class="fa fa-twitter fa-fw"></i> Sign up with Twitter</a>
+                        <a href="#" class="google btn"><i class="fa fa-google fa-fw"></i> Sign up with Google+</a>
+                    </div>
+                    <div class="manual-signup">
+                        <h4>Create a brand new account:</h4>
+                        <input type="text" name="username" placeholder="Display name" required>
+                        <input type="email" name="email" placeholder="Email address" required>
+                        <input type="password" name="password" placeholder="Password" required>
+                        <input type="submit" class="btn" value="Sign Up">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function showMailingPopUp() {
+            //alert("Yo");
+            window.dojoRequire(["mojo/signup-forms/Loader"], function (L) {
+                L.start({
+                    "baseUrl": "mc.us3.list-manage.com",
+                    "uuid": "027cd3bc28be6ee99dcdb6522",
+                    "lid": "5340dfee32"
+                })
+            });
+            document.cookie = "MCPopupClosed=; expires=Thu, 01 Jan 1970 00:00:00 UTC";
+        }
+        document.getElementById("open-popup").onclick = function () {
+            showMailingPopUp()
+        };
+    </script>
+</body>
+
+</html>
