@@ -133,7 +133,7 @@ h4 {
     font-weight: normal;
 }
 
-.splash .learn-more-space {
+.learn-more-space {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -141,7 +141,7 @@ h4 {
     text-align: left;
 }
 
-.splash .learn-more-space p {
+.learn-more-space p {
     padding-top: 1.5em;
     padding-bottom: 1.5em;
     font-size: 1.3em;
@@ -244,7 +244,7 @@ h4 {
     flex-direction: row;
 }
 
-.question-picker nav {
+nav {
     display: flex;
     flex-direction: column;
     background-color: #e9e9e9;
@@ -252,49 +252,49 @@ h4 {
     min-width: 240px;
 }
 
-.question-picker .sort-by {
+.sort-by {
     display: flex;
     flex-direction: column;
     padding: 1em;
     border-bottom: #CFCDCD solid 2px;
 }
 
-.question-picker .subject-filter {
+.subject-filter {
     display: flex;
     flex-direction: column;
     padding: 0 1em 1em 1em;
 }
 
-.question-picker .sort-by i {
+.sort-by i {
     margin-right: 10px;
 }
 
-.question-picker .sort-by .btn {
+.sort-by .btn {
     text-align: left;
 }
 
-.question-picker .tag-filter {
+.tag-filter {
     text-align: left;
 }
 
-.question-picker .subject-filter h4 {
+.subject-filter h4 {
     margin-top: 1em;
 }
 
-.question-picker .subject-filter input[type="text"] {
+.subject-filter input[type="text"] {
     margin-bottom: 1em;
 }
 
-.question-picker .subject-filter .tag-filter {
+.tag-filter {
     width: 80%;
     text-decoration: line-through;
 }
 
-.question-picker .subject-filter .tag-filter.active {
+.tag-filter.active {
     text-decoration: none;
 }
 
-.question-picker .question-list {
+.question-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -302,17 +302,18 @@ h4 {
     background-color: rgba(92, 92, 110, 0.781);
 }
 
-.question-picker .question-list .question {
+.question {
     display: flex;
     flex-direction: column;
-    width: 470px;
+    min-width: 400px;
+    max-width: 525px;
     margin: 8px;
     background-color: #e9e9e9;
     box-shadow: 6px 6px 8px -4px rgba(0,0,0,0.75);
     border-radius: 8px;
 }
 
-.question-picker .question-list .question-title {
+.question-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -328,18 +329,18 @@ h4 {
     height: 78px;
 }
 
-.question-picker .question-list .question-title:hover {
+.question-title:hover {
     cursor: pointer;
 }
 
-.question-picker .question-list .question .question-stats {
+.question-stats {
     display: flex;
     flex-direction: row;
     margin-top: 8px;
     margin-bottom: 3px;
 }
 
-.question-picker .question-list .question .question-detail {
+.question-detail {
     text-overflow: ellipsis;
     overflow: hidden;
     color: #505050;
@@ -349,7 +350,7 @@ h4 {
     border-bottom: 1px solid lightgrey;
 }
 
-.question-picker .question-list .question .question-date-author {
+.question-date-author {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -357,11 +358,11 @@ h4 {
     border-bottom: 1px solid lightgrey;
 }
 
-.question-picker .question-list .question .question-date-author i {
+.question-date-author i {
     margin-right: 5px;
 }
 
-.question-picker .question-list .question .question-date-author .question-date {
+.question-date {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -369,7 +370,7 @@ h4 {
     width: 270px;
 }
 
-.question-picker .question-list .question .question-date-author .question-author {
+.question-author {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -377,13 +378,13 @@ h4 {
     width: 100%;
 }
 
-.question-picker .question-list .question .question-stats {
+.question-stats {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.question-picker .question-list .question .question-stat {
+.question-stat {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -392,31 +393,31 @@ h4 {
     width: 100%;
 }
 
-.question-picker .question-list .question .question-stat i {
+.question-stat i {
     margin-right: 4px;
 }
 
-.question-picker .question-list .question .question-stat.watching {
+.question-stat.watching {
     background-color: #3B5998;
     color: white;
 }
 
-.question-picker .question-list .question .question-stat.stared {
+.question-stat.stared {
     background-color: goldenrod;
     color: white;
 }
 
-.question-picker .question-list .question .question-stat.liked {
+.question-stat.liked {
     background-color: green;
     color: white;
 }
 
-.question-picker .question-list .question .question-stat.disliked {
+.question-stat.disliked {
     background-color: rgb(180, 0, 0);
     color: white;
 }
 
-.question-picker .question-list .question .question-tags-list {
+.question-tags-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -426,7 +427,7 @@ h4 {
     height: 78px;
 }
 
-.question-picker .question-list .question .question-tags-list .question-tag {
+.question-tag {
     background-color: #d3d9df;
     padding: 5px 10px 5px 5px;
     margin: 3px;
@@ -435,15 +436,27 @@ h4 {
     font-size: 14px;
 }
 
-.question-picker .question-list .question .question-activity {
+.question-rattings {
     display: flex;
     flex-direction: row;
     padding: 8px 10px 10px 5px;
     width: 100%;
-    align-self: flex-end;
 }
 
-.question-picker .question-list .question .question-activity .progress {
+.question-dept {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin-right: 10px;
+}
+
+.question-activity {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+}
+
+.question-rattings .progress {
     width: 100%;
     margin-left: 5px;
     background-color: white;
