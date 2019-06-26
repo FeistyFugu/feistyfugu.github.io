@@ -335,13 +335,15 @@ h4 {
 .question-picker .question-list .question .question-stats {
     display: flex;
     flex-direction: row;
+    margin-top: 8px;
+    margin-bottom: 3px;
 }
 
 .question-picker .question-list .question .question-detail {
     text-overflow: ellipsis;
     overflow: hidden;
     color: #505050;
-    padding: 7px;
+    padding: 9px;
     min-height: 135px;
     max-height: 135px;
     border-bottom: 1px solid lightgrey;
@@ -352,6 +354,7 @@ h4 {
     flex-direction: row;
     justify-content: flex-start;
     padding: 7px;
+    border-bottom: 1px solid lightgrey;
 }
 
 .question-picker .question-list .question .question-date-author i {
@@ -409,7 +412,7 @@ h4 {
 }
 
 .question-picker .question-list .question .question-stat.disliked {
-    background-color: red;
+    background-color: rgb(180, 0, 0);
     color: white;
 }
 
