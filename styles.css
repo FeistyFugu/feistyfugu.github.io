@@ -56,6 +56,7 @@ h4 {
     top: 0;
     width: 100%;
     background-color: #e9e9e9;
+    z-index: 100;
 }
 
 .topnav .logo-space {
@@ -377,7 +378,7 @@ h4 {
 }
 
 .question-picker .question-list .question .question-tags-list .question-tag {
-    background-color: rgb(244, 245, 220);
+    background-color: #d5d5df;
     padding: 3px;
     margin: 3px;
     border-radius: 5px;
