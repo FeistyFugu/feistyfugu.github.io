@@ -57,6 +57,7 @@ h4 {
     width: 100%;
     background-color: #e9e9e9;
     z-index: 100;
+    box-shadow: 0 6px 8px -4px rgba(0,0,0,0.75);
 }
 
 .topnav .logo-space {
@@ -294,56 +295,41 @@ h4 {
 }
 
 .question-picker .question-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 12px;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     padding: 10px;
     background-color: rgba(92, 92, 110, 0.781);
 }
 
-.question-picker .question-list .question-title {
-    padding: 0.5em;
-    background-color: #d5d5df;
-    color: black;
-    text-align: center;
-    font-size: 20px;
-}
-
-/* .question-picker .question-list .question-title.cold {
-    background-color: rgb(196, 224, 245);
-    color: black;
-}
-
-.question-picker .question-list .question-title.warming {
-    background-color: rgb(0, 4, 255);
-    color: white;
-}
-
-.question-picker .question-list .question-title.warm {
-    background-color: rgb(255, 230, 0);
-    color: black;
-}
-
-.question-picker .question-list .question-title.warmer {
-    background-color: rgb(255, 153, 0);
-    color: black;
-}
-
-.question-picker .question-list .question-title.hot {
-    background-color: rgb(255, 102, 0);
-    color: white;
-}
-
-.question-picker .question-list .question-title.hottest {
-    background-color: rgb(209, 2, 2);
-    color: white;
-}*/
-
 .question-picker .question-list .question {
+    display: flex;
+    flex-direction: column;
+    width: 470px;
+    margin: 8px;
     background-color: #e9e9e9;
     box-shadow: 6px 6px 8px -4px rgba(0,0,0,0.75);
     border-radius: 8px;
+}
+
+.question-picker .question-list .question-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5em;
+    color: black;
+    background-color: #d3d9df;
+    text-align: center;
+    font-size: 22px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    height: 78px;
+}
+
+.question-picker .question-list .question-title:hover {
+    cursor: pointer;
 }
 
 .question-picker .question-list .question .question-stats {
@@ -362,26 +348,36 @@ h4 {
 }
 
 .question-picker .question-list .question .question-date-author {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
     padding: 7px;
 }
 
-.question-picker .question-list .question .question-stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+.question-picker .question-list .question .question-date-author i {
+    margin-right: 5px;
 }
 
-.question-picker .question-list .question .question-tags-list {
+.question-picker .question-list .question .question-date-author .question-date {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    padding: 3px;
+    justify-content: flex-start;
+    align-items: center;
+    width: 270px;
 }
 
-.question-picker .question-list .question .question-tags-list .question-tag {
-    background-color: #d5d5df;
-    padding: 3px;
-    margin: 3px;
-    border-radius: 5px;
+.question-picker .question-list .question .question-date-author .question-author {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+}
+
+.question-picker .question-list .question .question-stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .question-picker .question-list .question .question-stat {
@@ -390,6 +386,7 @@ h4 {
     justify-content: center;
     align-items: center;
     padding: 5px;
+    width: 100%;
 }
 
 .question-picker .question-list .question .question-stat i {
@@ -414,6 +411,39 @@ h4 {
 .question-picker .question-list .question .question-stat.disliked {
     background-color: red;
     color: white;
+}
+
+.question-picker .question-list .question .question-tags-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 7px 3px 3px 3px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    height: 78px;
+}
+
+.question-picker .question-list .question .question-tags-list .question-tag {
+    background-color: #d3d9df;
+    padding: 5px 10px 5px 5px;
+    margin: 3px;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 14px;
+}
+
+.question-picker .question-list .question .question-activity {
+    display: flex;
+    flex-direction: row;
+    padding: 8px 10px 10px 5px;
+    width: 100%;
+    align-self: flex-end;
+}
+
+.question-picker .question-list .question .question-activity .progress {
+    width: 100%;
+    margin-left: 5px;
+    background-color: white;
 }
 
 /* --- Media queries --- */
