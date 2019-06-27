@@ -90,6 +90,7 @@ h4 {
 
 .topnav .account-space {
     display: flex;
+    flex-direction: row;
 }
 
 .topnav .account-space img {
@@ -487,7 +488,7 @@ nav {
 
 @media screen and (max-width: 1360px) {
     .question-list {
-        padding: 0;
+        padding: 7px 0 0 0;
     }
     .question {
         min-width: auto;
@@ -546,4 +547,8 @@ nav {
         height: 0;
         overflow: hidden;
     }
+    .topnav .search-space {
+        width: 0;
+        overflow: hidden;
+    }    
 }
