@@ -540,3 +540,10 @@ nav {
         align-self: flex-start;
     }
 }
+
+@media screen and (max-width: 480px) {
+    .splash {
+        height: 0;
+        overflow: hidden;
+    }
+}
