@@ -310,7 +310,6 @@ nav {
 .question {
     display: flex;
     flex-direction: column;
-    min-width: 350px;
     max-width: 525px;
     margin: 8px;
     background-color: #e9e9e9;
@@ -390,7 +389,8 @@ nav {
     padding: 8px 5px 3px 5px;
     text-overflow: ellipsis;
     overflow: hidden;
-    height: 78px;
+    min-height: 78px;
+    max-height: 78px;
 }
 
 .question-tag {
@@ -485,6 +485,19 @@ nav {
 
 /* --- Media queries --- */
 
+@media screen and (max-width: 1360px) {
+    .question {
+        min-width: auto;
+        max-width: 100%;
+    }
+    .question-detail {
+        min-height: auto;
+    }
+    .question-tags-list {
+        min-height: auto;
+    }
+}
+
 @media screen and (max-width: 1325px) {
     .splash {
         flex-direction: column;
@@ -498,10 +511,6 @@ nav {
     nav {
         width: 0;
         min-width: 0;
-    }
-    .question {
-        min-width: auto;
-        max-width: 100%;
     }
 }
 
