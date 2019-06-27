@@ -442,6 +442,10 @@ nav {
     width: 100%;
 }
 
+.question-stat.active {
+    border: none !important;
+}
+
 .question-stat i {
     margin-right: 4px;
 }
@@ -451,23 +455,31 @@ nav {
 }
 
 .question-stat.active>span, .question-stat.active>i {
-    color: white !important;;
+    color: white !important;
 }
 
 .question-stat.watching.active {
-    background-color: #0000cc !important;
+    /* background-color: #3B5998 !important; */
+    background-color: #007bff !important;
+    border-color: #007bff !important;
 }
 
 .question-stat.stared.active {
-    background-color: rgb(214, 157, 11) !important;
+    /* background-color: rgb(214, 157, 11) !important; */
+    background-color: #ffc107 !important;
+    border-color: #ffc107 !important;
 }
 
 .question-stat.liked.active {
-    background-color: rgb(0, 114, 0) !important;
+    /* background-color: rgb(0, 114, 0) !important; */
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
 }
 
 .question-stat.disliked.active {
-    background-color: rgb(145, 0, 0) !important;
+    /* background-color: rgb(145, 0, 0) !important; */
+    background-color: #dc3545 !important;
+    border-color: #dc3545 !important;
 }
 
 /* --- Media queries --- */
