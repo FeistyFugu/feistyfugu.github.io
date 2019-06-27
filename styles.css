@@ -486,6 +486,9 @@ nav {
 /* --- Media queries --- */
 
 @media screen and (max-width: 1360px) {
+    .question-list {
+        padding: 0;
+    }
     .question {
         min-width: auto;
         max-width: 100%;
@@ -511,6 +514,11 @@ nav {
     nav {
         width: 0;
         min-width: 0;
+    }
+    .topnav .logo-space p {
+        width: 0;
+        min-width: 0;
+        overflow: hidden;
     }
 }
 
