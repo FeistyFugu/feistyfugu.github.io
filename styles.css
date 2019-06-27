@@ -340,13 +340,6 @@ nav {
     background-color: #c6dcf0;
 }
 
-.question-stats {
-    display: flex;
-    flex-direction: row;
-    margin-top: 8px;
-    margin-bottom: 3px;
-}
-
 .question-detail {
     text-overflow: ellipsis;
     overflow: hidden;
@@ -385,50 +378,11 @@ nav {
     width: 100%;
 }
 
-.question-stats {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.question-stat {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    width: 100%;
-}
-
-.question-stat i {
-    margin-right: 4px;
-}
-
-.question-stat.watching {
-    background-color: #3B5998;
-    color: white;
-}
-
-.question-stat.stared {
-    background-color: goldenrod;
-    color: white;
-}
-
-.question-stat.liked {
-    background-color: green;
-    color: white;
-}
-
-.question-stat.disliked {
-    background-color: rgb(180, 0, 0);
-    color: white;
-}
-
 .question-tags-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding: 7px 3px 3px 3px;
+    padding: 8px 5px 3px 5px;
     text-overflow: ellipsis;
     overflow: hidden;
     height: 78px;
@@ -441,13 +395,6 @@ nav {
     border-radius: 5px;
     height: 30px;
     font-size: 14px;
-}
-
-.question-rattings {
-    display: flex;
-    flex-direction: row;
-    padding: 8px 10px 10px 5px;
-    width: 100%;
 }
 
 .question-dept {
@@ -463,10 +410,56 @@ nav {
     width: 50%;
 }
 
+.question-rattings {
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    padding: 12px 10px 10px 8px;
+    width: 100%;
+    border-top: 1px solid lightgrey;
+}
+
 .question-rattings .progress {
     width: 100%;
     margin-left: 5px;
     background-color: white;
+}
+
+.question-stats {
+    margin: 3px 10px 11px 10px;
+}
+
+.question-stat {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+}
+
+.question-stat i {
+    margin-right: 4px;
+}
+
+.question-stat>span, .question-stat>i {
+    color: black;
+}
+
+.question-stat.watching.active>span, .question-stat.watching.active>i {
+    color: rgb(39, 58, 97);
+}
+
+.question-stat.stared.active>span, .question-stat.stared.active>i {
+    color: rgb(214, 157, 11);
+}
+
+.question-stat.liked.active>span, .question-stat.liked.active>i {
+    color: rgb(0, 114, 0);
+}
+
+.question-stat.disliked.active>span, .question-stat.disliked.active>i {
+    color: rgb(145, 0, 0);
 }
 
 /* --- Media queries --- */
