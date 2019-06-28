@@ -372,7 +372,10 @@ nav {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 270px;
+    margin-right: 10px;
+    /* width: 40%; */
+    /* min-width: 170px; */
+    /* max-width: 230px; */
 }
 
 .question-author {
@@ -380,7 +383,7 @@ nav {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
+    /* width: 60%; */
 }
 
 .question-tags-list {
@@ -547,8 +550,10 @@ nav {
         height: 0;
         overflow: hidden;
     }
-    .topnav .search-space {
-        width: 0;
-        overflow: hidden;
-    }    
+}
+
+@media screen and (max-width: 380px) {
+    .question-date-author {
+        flex-direction: column;
+    }
 }
