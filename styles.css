@@ -545,13 +545,6 @@ nav {
     }
 }
 
-@media screen and (max-width: 480px) {
-    .splash {
-        height: 0;
-        overflow: hidden;
-    }
-}
-
 @media screen and (max-width: 380px) {
     .question-date-author {
         flex-direction: column;
