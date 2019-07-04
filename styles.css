@@ -307,23 +307,15 @@ nav {
     flex-wrap: wrap;
     padding: 10px;
     padding: 2px;
-    background-color: rgba(92, 92, 110, 0.781);
 }
 
 .question {
     display: flex;
     flex-direction: column;
     max-width: 525px;
-    margin: 8px;
+    margin: 4px;
     background-color: #e9e9e9;
-    box-shadow: 6px 6px 8px -4px rgba(0, 0, 0, 0.75);
-    border-radius: 8px;
     transition: all 300ms;
-}
-
-.question:hover {
-    transform: translate(0, -6px);
-    box-shadow: 12px 12px 8px -4px rgba(0, 0, 0, 0.75);
 }
 
 .question-title {
@@ -337,8 +329,6 @@ nav {
     font-size: 22px;
     text-overflow: ellipsis;
     overflow: hidden;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
     height: 78px;
 }
 
@@ -485,7 +475,7 @@ nav {
 
 @media screen and (max-width: 1360px) {
     .question-list {
-        padding: 7px 0 0 0;
+        padding: 2px;
     }
     .question {
         min-width: auto;
