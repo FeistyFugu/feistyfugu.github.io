@@ -92,52 +92,52 @@
                 </div>
                 <div class="subject-filter">
                     <h4>Filter by tags:</h4>
-                    <input type="text" placeholder="Include or exclude tags...">
+                    <input type="text" placeholder="Include or exclude tags..." id="addSearchTag">
 
-                    <div class="btn-group-vertical">
-                        <div class="btn-group">
+                    <div class="btn-group-vertical" id="tagFilterList">
+                        <div class="btn-group tag-filter-container">
                             <button type="button" class="btn btn-light tag-filter active"
                                 data-toggle="button">Politics</button>
                             <button type="button" class="btn btn-light remove-tag-filter">
                                 <i class="fas fa-times fa-fw"></i>
                             </button>
                         </div>
-                        <div class="btn-group">
+                        <div class="btn-group tag-filter-container">
                             <button type="button" class="btn btn-light tag-filter active"
                                 data-toggle="button">Religion</button>
                             <button type="button" class="btn btn-light remove-tag-filter">
                                 <i class="fas fa-times fa-fw"></i>
                             </button>
                         </div>
-                        <div class="btn-group">
+                        <div class="btn-group tag-filter-container">
                             <button type="button" class="btn btn-light tag-filter active"
                                 data-toggle="button">Culture</button>
                             <button type="button" class="btn btn-light remove-tag-filter">
                                 <i class="fas fa-times fa-fw"></i>
                             </button>
                         </div>
-                        <div class="btn-group">
+                        <div class="btn-group tag-filter-container">
                             <button type="button" class="btn btn-light tag-filter active"
                                 data-toggle="button">Ethics</button>
                             <button type="button" class="btn btn-light remove-tag-filter">
                                 <i class="fas fa-times fa-fw"></i>
                             </button>
                         </div>
-                        <div class="btn-group">
+                        <div class="btn-group tag-filter-container">
                             <button type="button" class="btn btn-light tag-filter active"
                                 data-toggle="button">Society</button>
                             <button type="button" class="btn btn-light remove-tag-filter">
                                 <i class="fas fa-times fa-fw"></i>
                             </button>
                         </div>
-                        <div class="btn-group">
+                        <div class="btn-group tag-filter-container">
                             <button type="button" class="btn btn-light tag-filter active"
                                 data-toggle="button">Economy</button>
                             <button type="button" class="btn btn-light remove-tag-filter">
                                 <i class="fas fa-times fa-fw"></i>
                             </button>
                         </div>
-                        <div class="btn-group">
+                        <div class="btn-group tag-filter-container">
                             <button type="button" class="btn btn-light tag-filter active" data-toggle="button">
                                 News</button>
                             <button type="button" class="btn btn-light remove-tag-filter">
@@ -1105,6 +1105,7 @@
             </div>
         </div>
     </div>
+    <script src="actions.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
