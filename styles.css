@@ -3,6 +3,7 @@
 body {
     margin: 0;
     font-family: 'Muli', sans-serif;
+    background-color: #141422;
 }
 
 .main {
@@ -12,9 +13,10 @@ body {
 input[type=text] {
     width: 100%;
     padding: 6px;
-    margin-top: 8px;
     border: none;
     border-radius: 4px;
+    background-color: #141422;
+    color: #d0d0d2;
 }
 
 h3 {
@@ -50,33 +52,85 @@ h4 {
     outline: none;
 }
 
+.btn-light {
+    background-color: #141422;
+    border: none;
+    color: #d0d0d2 !important;
+    font-weight: bold;
+}
+
+.btn-light:hover {
+    background-color: #373743;
+}
+
+.btn-light.active {
+    background-color: #373743 !important;
+}
+
 /* --- Top navigation bar--- */
 
 .topnav {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    align-content: stretch;
     overflow: hidden;
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: #e9e9e9;
+    background-color: #262633;
     z-index: 100;
     box-shadow: 0 6px 8px -4px rgba(0, 0, 0, 0.75);
+    color: #d0d0d2;
+    padding: 8px 12px 8px 4px;
 }
 
-.topnav .logo-space {
+.topnav .fa-times-circle {
+    color: #af1038;
+    margin: 0 4px 0 4px;
+}
+
+.topnav .fa-check-circle {
+    color: #28a745;
+    margin: 0 4px 0 4px;
+}
+
+#CoolsensusBrand {
+    font-weight: bolder;
+    font-size: large;
+    color: #45c3ec;
+}
+
+.topnav button {
+    width: 8em;
+    align-self: flex-end;
+}
+
+.search-space {
+    flex-grow: 1;
+    padding: 0 12px 0 4px;
+}
+
+/* .topnav .logo-space {
     display: flex;
     flex-direction: row;
-    padding: 0 1.5em 0 0.5em;
+    padding: 0 1em 0 0.5em;
+    margin-top: 9px;
+    font-weight: bolder;
+    font-size: large;
+    color: #45c3ec;
 }
 
-.topnav .logo-space img {
-    width: 50px;
-    height: 50px;
+.topnav .logo-space span {
+    margin: 5px 7px 5px 7px;
 }
 
-.topnav .logo-space p {
-    margin-top: 14px;
+.logo-space .fa-check-circle {
+    color: #28a745;
+}
+
+.logo-space .fa-times-circle {
+    color: #af1038;
 }
 
 .topnav .search-space {
@@ -88,40 +142,19 @@ h4 {
     font-size: 17px;
 }
 
-.topnav .account-space {
+.account-space {
     display: flex;
     flex-direction: row;
+    padding: 8px;
 }
 
-.topnav .account-space img {
-    height: 45px;
-    width: 45px;
-    padding: 3px;
+.account-space button {
+    width: 8em;
 }
 
-.topnav a {
-    float: left;
-    display: block;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.topnav a:hover {
-    background-color: #ddd;
-    color: black;
-}
-
-.topnav #signup-link {
-    background-color: #0000cc;
-    color: white;
-}
-
-.topnav #signup-link:hover {
-    background-color: #3333ff;
-}
+.account-space .btn-light i {
+    margin-right: 4px;
+} */
 
 /* --- Splash screen --- */
 
@@ -252,24 +285,23 @@ h4 {
 nav {
     display: flex;
     flex-direction: column;
-    background-color: #e9e9e9;
+    background-color: #262633;
     width: 240px;
     min-width: 240px;
     overflow-x: hidden;
+    color: #d0d0d2;
 }
 
 .sort-by {
     display: flex;
     flex-direction: column;
     padding: 1em;
-    border-bottom: 1px solid lightgrey;
 }
 
 .subject-filter {
     display: flex;
     flex-direction: column;
     padding: 0 1em 1em 1em;
-    border-bottom: 1px solid lightgrey;
 }
 
 .sort-by i {
@@ -302,20 +334,19 @@ nav {
 }
 
 .question-list {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 10px;
-    padding: 2px;
+    column-gap: 12px;
+    padding: 12px;
 }
 
 .question {
     display: flex;
     flex-direction: column;
-    max-width: 525px;
-    margin: 4px;
-    background-color: #e9e9e9;
+    margin: 0 0 12px 0;
+    background-color: #262633;
     transition: all 300ms;
+    color: #d0d0d2;
+    border-radius: 8px;
+    break-inside: avoid;
 }
 
 .question-title {
@@ -323,28 +354,14 @@ nav {
     flex-direction: column;
     justify-content: center;
     padding: 0.5em;
-    color: black;
-    background-color: #d3d9df;
-    text-align: center;
-    font-size: 22px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    height: 78px;
-}
-
-.question-title:hover {
-    cursor: pointer;
-    background-color: #c6dcf0;
+    color: #45c3ec;
+    font-size: x-large;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .question-detail {
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: #505050;
     padding: 9px;
-    min-height: 135px;
-    max-height: 135px;
-    border-bottom: 1px solid lightgrey;
 }
 
 .question-date-author {
@@ -352,7 +369,6 @@ nav {
     flex-direction: row;
     justify-content: flex-start;
     padding: 7px;
-    border-bottom: 1px solid lightgrey;
 }
 
 .question-date-author i {
@@ -381,12 +397,10 @@ nav {
     padding: 8px 5px 3px 5px;
     text-overflow: ellipsis;
     overflow: hidden;
-    min-height: 78px;
-    max-height: 78px;
 }
 
 .question-tag {
-    background-color: #d3d9df;
+    background-color: #141422;
     padding: 5px 10px 5px 5px;
     margin: 3px;
     border-radius: 5px;
@@ -410,41 +424,19 @@ nav {
 .question-rattings {
     display: flex;
     flex-direction: row;
-    margin-top: 10px;
+    margin-top: 4px;
     padding: 12px 10px 10px 8px;
     width: 100%;
-    border-top: 1px solid lightgrey;
 }
 
 .question-rattings .progress {
     width: 100%;
     margin-left: 5px;
-    background-color: white;
+    background-color: #141422;
 }
 
 .question-stats {
-    margin: 3px 10px 11px 10px;
-}
-
-.question-stat {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    width: 100%;
-}
-
-.question-stat.active {
-    border: none !important;
-}
-
-.question-stat i {
-    margin-right: 4px;
-}
-
-.question-stat>span, .question-stat>i {
-    color: black;
+    margin: 12px 10px 11px 10px;
 }
 
 .question-stat.active>span, .question-stat.active>i {
@@ -472,22 +464,6 @@ nav {
 }
 
 /* --- Media queries --- */
-
-@media screen and (max-width: 1360px) {
-    .question-list {
-        padding: 2px;
-    }
-    .question {
-        min-width: auto;
-        max-width: 100%;
-    }
-    .question-detail {
-        min-height: auto;
-    }
-    .question-tags-list {
-        min-height: auto;
-    }
-}
 
 @media screen and (max-width: 1325px) {
     .splash {

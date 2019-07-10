@@ -1,3 +1,14 @@
+const idealQuestionSize = 450;
+
+window.addEventListener("load", function() {
+    document.getElementById("questionList").style.columnCount = Math.floor(((window.innerWidth - filterBar.offsetWidth) - 24) / idealQuestionSize);
+});
+
+window.addEventListener("resize", function() {
+    const qList = document.getElementById("questionList");
+    qList.style.columnCount = Math.floor(qList.clientWidth / idealQuestionSize);
+});
+
 document.getElementById("addSearchTag").addEventListener("keypress", addSearchTag);
 document.querySelectorAll(".tag-filter").forEach(elem => elem.addEventListener("click", excludeSearchTag));
 document.querySelectorAll(".remove-tag-filter").forEach(elem => elem.addEventListener("click", removeSearchTag));
@@ -7,7 +18,7 @@ function addSearchTag(evt) {
         // Div
         const newTagFilter = document.createElement("div");
         newTagFilter.classList.add("btn-group", "tag-filter-container");
-        
+
         // Filter button
         const filterBtn = document.createElement("button");
         filterBtn.type = "button";
