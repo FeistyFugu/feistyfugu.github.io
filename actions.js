@@ -1,17 +1,16 @@
-const idealQuestionSize = 450;
+const idealQuestionSize = 525;
 
-window.addEventListener("load", function() {
-    document.getElementById("questionList").style.columnCount = Math.floor(((window.innerWidth - filterBar.offsetWidth) - 24) / idealQuestionSize);
-});
-
-window.addEventListener("resize", function() {
-    const qList = document.getElementById("questionList");
-    qList.style.columnCount = Math.floor(qList.clientWidth / idealQuestionSize);
-});
+window.addEventListener("load", setQuestionLayout);
+window.addEventListener("resize", setQuestionLayout);
 
 document.getElementById("addSearchTag").addEventListener("keypress", addSearchTag);
 document.querySelectorAll(".tag-filter").forEach(elem => elem.addEventListener("click", excludeSearchTag));
 document.querySelectorAll(".remove-tag-filter").forEach(elem => elem.addEventListener("click", removeSearchTag));
+
+function setQuestionLayout() {
+    const qList = document.getElementById("questionList");
+    qList.style.gridTemplateColumns = `repeat(${Math.floor((qList.offsetWidth) / idealQuestionSize)}, 1fr)`;
+}
 
 function addSearchTag(evt) {
     if (evt.key === 'Enter' && evt.target.value.length > 0) {
